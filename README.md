@@ -20,10 +20,10 @@ openssl x509 -req -in Devide.csr -CA RootCA.pem -CAkey RootCA.key -CAcreateseria
 
 openssl pkcs12 -export -out Devide.pfx -inkey Devide.key -in Devide.crt
 
-dhparam if need
+### dhparam if need
 openssl dhparam -dsaparam -out dhparam.pem 2048
 
-display cert in text
+### display cert in text
 openssl x509 -in RootCA.pem -text
 
 openssl.exe pkcs12 -info -in Devide.pfx | openssl.exe x509 -noout -text > Devide.pfx.details.txt
