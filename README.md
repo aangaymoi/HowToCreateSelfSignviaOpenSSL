@@ -8,6 +8,8 @@ Once you do that, every device that you manage via HTTPS just needs to have its 
 - Create CSR for device
 - Sign CSR with root CA key
 
+## This below is step by step that will help you a alot
+
 openssl genrsa -out RootCA.key 4096
 openssl req -config openssl.cnf -x509 -new -nodes -key RootCA.key -sha256 -days 50000 -out RootCA.pem -subj "/C=UA/ST=UA/L=UA/O=UA Inc./OU=IT Department/CN=UA.com"
 
